@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Naranjo</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_O7XUDbnHgJolQ3oJpfKt0");
+        })();
+    </script>
+</head>
+
+<header id="inicio">
+    <nav>
+        <div class="container-fluid navbar-menu">
+            <div class="row" style="width: 100%;">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-3 d-flex justify-content-start align-items-center nav-logo ancla">
+                    <a href="#inicio">
+                        <img src="images/logo-naranjo.png" alt="" class="logo">
+                    </a>
+                </div>
+                <div class="col-lg-9 d-flex justify-content-end align-items-center nav-destock">
+                        <ul class="nav">
+                            <li class="nav-item ancla">
+                              <a class="nav-link" href="#inicio">HOME</a>
+                            </li>
+                            <li class="nav-item ancla">
+                              <a class="nav-link" href="#diferenciales">DIFERENCIALES</a>
+                            </li>
+                            <li class="nav-item ancla">
+                                <a class="nav-link" href="#ubicacion">UBICACION</a>
+                            </li>
+                            <li class="nav-item ancla">
+                              <a class="nav-link" href="#servicios">SERVICIOS</a>
+                            </li>
+                        </ul>                              
+                </div>
+                <div class="col-6 menu-hamburguesa" style="display: none;">
+                    <div id="btn-menu" onclick="onClickMenu()">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid menu" id="menu-desplegable" style="display: none;">
+            <div class="row">
+                <div class="col-8 flex my-auto" style="flex-direction: column;">
+                    <div>
+                        <div id="btn-cerrar-menu" onclick="onClickCerrar()" class="change">
+                            <div></div>
+                            <div></div>
+                        </div>
+                        <div class="nav">
+                            <ul class="nav flex-column">
+                                <li class="nav-item ancla">
+                                    <a class="nav-link" href="#inicio">HOME</a>
+                                  </li>
+                                  <li class="nav-item ancla">
+                                    <a class="nav-link" href="#diferenciales">DIFERENCIALES</a>
+                                  </li>
+                                  <li class="nav-item ancla">
+                                      <a class="nav-link" href="#ubicacion">UBICACION</a>
+                                  </li>
+                                  <li class="nav-item ancla">
+                                    <a class="nav-link" href="#servicios">SERVICIOS</a>
+                                  </li>
+                            </ul>                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body>
+    
+    <div class="container-fluid banner-principal d-flex justify-content-center align-items-center padding">
+        <div class="row">
+            <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-center white animate__animated animate__fadeInLeft animate__slow">
+                <h1 style="letter-spacing: 5px;">UNA NUEVA META</h1>
+                <h1>tu barrio crece</h1>
+                <p>El Naranjo es un barrio con aroma a tiempo de cosecha, creador de puentes entre el consumidor y la producción.Desde la siembra hasta la cosecha, que puedas saber cada paso que tu producción tiene.<br><br>Te ofrece a cada momento cambios y espacios para que eso suceda.<br><br>Un barrio en expansión a más de 400 lotes, fomenta el consumo local de forma prometedora. Una nueva propuesta para volver a lo principal para vos y tu familia. Alcanzá lo esencial en tu vida que El Naranjo te propone.<br><br><b style="font-weight: 900;">Accedé hoy a información para la solución a tu vivienda.</b></p>
+            </div>
+            <div class="col-md-12 col-lg-6 d-flex justify-content-center align-items-center formulario">
+                <form action="" class="d-flex flex-column justify-content-center form-banner-principal" id="form">
+                    <h3>Dejanos tu consulta</h3>
+                    <div class="form-group">
+                        <input type="text" name="nombre" placeholder="nombre">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" name="celular" placeholder="celular">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="mensaje" id="mensaje" placeholder="mensaje"></textarea>
+                    </div>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <p id="resp"></p>
+                        <button type="submit" class="boton-form" id="enviar">Enviar</button>
+                        <button class="boton-form" id="enviando" style="display: none;">Enviando</button>
+                    </div>
+                    <div class="img-form">
+                        <img src="images/obj-form.png" alt="" width="100%">
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 boton-modal-mobile">
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="boton-form" data-toggle="modal" data-target="#formulario">Dejanos tu consulta</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12" style="padding: 0;">
+                <div class="img-home-izq">
+                    <img src="images/obj-izq-home.png" alt="">
+                </div>
+                <div class="img-home-der">
+                    <img src="images/obj-dere-home.png" alt="">
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="images/img-slider-1.jpg" alt="" width="100%"></div>
+                    <div class="item"><img src="images/img-slider-2.jpg" alt="" width="100%"></div>
+                </div>
+                <div class="borde-carousel">
+                    <img src="images/borde-slider-1.png" alt="" width="100%">
+                </div>
+                <div class="img-borde-carousel">
+                    <img src="images/obj-izq-slider.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid expandio">
+        <div class="row">
+            <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-center white">
+                <h1>El naranjo se expandió</h1>
+                <p>Sigue construyéndose y creciendo gracias a las familias que lo conforman. Propone un desarrollo para la economía del hogar. Dando a disposición huertas comunitarias para producir y crear una propia red de producción.<br><br><b>Un barrio para memorias, recetas y actividades en familia</b>, con el sabor de lo hecho en casa desde la siembra, su cosecha, y su consumo, incluso su venta. Una alternativa ecológica y económica, donde cada miembro fomente la unión.<br><br>Presenta una oportunidad de superación y una serie de cambios, en la escala de esenciales en nuestra vida. <b>Con tranquilidad y cercanía a la ciudad.</b></p>
+            </div>
+            <div class="col-md-12 col-lg-6 d-flex justify-content-center">
+                <div class="ollie">                
+                    <img src="images/img-expandio.png" alt="">
+                </div>
+
+            </div>
+         <div class="carpetacomercial"> 
+            <div class="arboles">
+               <img src="./images/1.png" alt="arbol" class="arbol1"/>
+                <img src="./images/3.png" alt="arbol" class="arbol2"/> 
+                <!--<img src="./images/—Pngtree—silhouette tree root clip art_6018713.png" alt="raizarbol" class="raiz"> -->
+            </div>
+            <button id="gooey-button">    
+                Carpeta Comercial                    
+
+                </span>
+            </button>
+         </div>      
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <defs>
+            <filter id="gooey">
+                <!-- in="sourceGraphic" -->
+                <feGaussianBlur in="SourceGraphic" stdDeviation="5" result="blur" />
+                <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="highContrastGraphic" />
+                <feComposite in="SourceGraphic" in2="highContrastGraphic" operator="atop" />
+            </filter>
+        </defs>
+    </svg>
+    </div>
+    
+
+    <div class="container-fluid" id="diferenciales">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-start align-items-center titulo-experiencias">
+                <div class="img-experiencias-top">
+                    <img src="images/head-experiencias.png" alt="" width="100%">
+                </div>
+                <h1>Nuevas experiencias,<br><span>mismo lugar.</span></h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid experiencias">
+        <div class="row" data-aos="fade-up" data-aos-duration="1500" data-aos-once="true">
+            <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-start info-experiencias">
+                <div class="d-flex justify-content-center">
+                    <img src="images/icon-invernaderos.png" alt="" width="70%">
+                </div>
+                <h5 style="color: #ffbc76;">➜ invernaderos</h5>
+                <p>Un espacio de huertas compartidas, lugar de encuentro y vínculo con el otro, permitiendo tu producción propia, promoviendo el desarrollo personal y su consumo.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-start info-experiencias" >
+                <div class="d-flex justify-content-center">
+                    <img src="images/icon-locales.png" alt="" width="70%">
+                </div>
+                <h5 style="color: #fcaf92;">➜ locales comerciales</h5>
+                <p>Zonas pensadas para la concentración de los comercios locales, de manera que se fomente el consumo alternativo y una economía interna. </p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-start info-experiencias" >
+                <div class="d-flex justify-content-center">
+                    <img src="images/icon-calistenia.png" alt="" width="70%">
+                </div>
+                <h5 style="color: #dbd273;">➜ calistenia</h5>
+                <p>Espacios para recrearse y compartir, fomentando las relaciones personales en tranquilidad, con juegos para los más pequeños y un sistema para el ejercicio físico pensado para cualquier edad.</p>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-3 d-flex flex-column justify-content-start info-experiencias">
+                <div class="d-flex justify-content-center">
+                    <img src="images/icon-ferias.png" alt="" width="70%">
+                </div>
+                <h5 style="color: #426563;">➜ ferias</h5>
+                <p>El lugar pensado para el autoabastecimiento del barrio, para acrecentar el consumo interno e impulsar su sustentabilidad.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid my-5" id="ubicacion">
+        <div class="row">
+            <div class="col-12 titulo-ubicacion padding">
+                <h1>Ubicación</h1>
+            </div>
+            <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-end mapa">
+                <img src="images/img-mapa.png" alt="" width="50%">
+            </div>
+            
+            <div class="col-md-12 col-lg-6 d-flex flex-column justify-content-center align-items-start info-ubicacion">
+                <div class="d-flex align-items-center" style="width: 100%;">
+                    <img src="images/icon-ubicacion.png" alt="" width="25px">
+                    <h3>IBARLUCEA</h3>
+                </div>
+
+                <p>Ubicado a 12 km de Rosario, un lugar estratégico, cercano a la ciudad, <b>a tan solo 15 minutos</b> por Ruta Nacional 34.<br><br>Ibarlucea ofrece un horizonte de desarrollo integral definido, entre los actores públicos, privados y sociales abordando temáticas de expansión urbana, control, conectividad, movilidad y espacio público.</p>
+                <div class="img-der-ubicacion">
+                    <img src="images/obj-dere-ubicacion.png" alt="">
+                </div>
+                <!-- <img src="images/obj-dere-ubicacion2.png" alt="" class="obj"> -->
+                <div class="burbujita">
+                    <button id="gooey-button" disabled>                        
+                        <span class="bubbles">
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                            <span class="bubble"></span>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 top-servicios" style="padding: 0;">
+                <img src="images/top-serv.png" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid servicios padding" id="servicios">
+        <div class="row py-5">
+            <div class="col-12 white my-5">
+                <h1 class="text-shadow">Servicios</h1>
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex flex-column justify-content-between align-items-center">
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-estabilizado-granular.png" alt="">
+                    <p class="text-shadow letraservicio">Estabilizado granular</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-planta-potabilizadora.png" alt="">
+                    <p class="text-shadow letraservicio">Planta potabilizadora</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-forestacion-planificada.png" alt="">
+                    <p class="text-shadow letraservicio">Forestación planificada</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex flex-column justify-content-between align-items-center">
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-locales-comerciales.png" alt="">
+                    <p class="text-shadow letraservicio">Locales comerciales</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-wifi.png" alt="">
+                    <p class="text-shadow letraservicio">Wifi</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-red-media-tension.png" alt="">
+                    <p class="text-shadow letraservicio">Red media tensión</p>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-4 d-flex flex-column justify-content-between align-items-center">
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-huertas-urbanas.png" alt="">
+                    <p class="text-shadow letraservicio">Huertas urbanas</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-espacios-recreativos.png" alt="">
+                    <p class="text-shadow letraservicio">Espacios recreativos</p>
+                </div>
+                <div class="d-flex justify-content-start align-items-center white" style="width: 100%;">
+                    <img src="images/icon-cordon-cuneta.png" alt="">
+                    <p class="text-shadow letraservicio">Cordón cuneta</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 bot-servicios" style="padding: 0;">
+                <img src="images/bot-serv.png" alt="" width="100%">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid my-5 suiper">
+        <div class="row">
+          <div class="col-12 d-flex flex-column justify-content-center align-items-center triple-impacto">
+            <h1 style="color: #ef7a51;" class="textimpact">Triple impacto</h1>
+            <div class="container">
+              <div class="button" id="button1"></div>
+              <div class="button" id="button2"></div>
+              <div class="button" id="button3"></div>
+              <div class="text-container">
+              </div>
+              <div class="text" id="text">Haz clic en un botón</div>
+            </div>
+            <div class="respirar"></div>
+            <div class="fondazo">
+                <div class="lugini">
+                    <div>
+                    <img src="images/logo-roma-naranja.png " alt="" width="10%" class="lompa">
+                    </div>
+                </div>
+                <p style="color: #ffffff;" class="textopc">Como desarrolladores inmobiliarios, buscamos generar proyectos sustentables en donde el confort, los amenities y el cuidado del medio ambiente sean los ejes principales. Tenemos la intención de ofrecer verdaderas soluciones de vivienda para que puedas acceder a la vivienda que siempre soñaste.<br><br><b style="font-weight: 900;">Conectamos a la población con nuevas oportunidades</b></p>
+                <div class="img-triple-impacto">
+                    <img src="images/obj-footer.png" alt="">
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
+    <div class="container-fluid my-5 romper">
+        <div class="row">
+            <div class="col-12 d-flex flex-column justify-content-center align-items-center triple-impacto">
+                <h1 style="color: #ef7a51;">Triple impacto</h1>
+                <p style="color: #2c5350;">Resguardando y reorganizando los bordes de los canales Ibarlucea - Urquiza, impulsamos el desarrollo de una cohesión socio-territorial, ordenada, potenciando el uso productivo y protegiendo las áreas residenciales.</p>
+                <img src="images/img-triple-impacto.png" alt="" width="30%">
+                <div class="fondazophone">    
+                    <img src="images/Logo grupo roma blanco@2x.png" alt="" width="60%" class="logardo">
+                    <p style="color: #ffffff;" class="textophone">Como desarrolladores inmobiliarios, buscamos generar proyectos sustentables en donde el confort, los amenities y el cuidado del medio ambiente sean los ejes principales. Tenemos la intención de ofrecer verdaderas soluciones de vivienda para que puedas acceder a la vivienda que siempre soñaste.<br><br><b style="font-weight: 900;">Conectamos a la población con nuevas oportunidades</b></p>
+                    <div class="img-triple-impacto">
+                        <img src="images/obj-footer.png" alt="">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid padding footer py-5">
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-start align-items-center">
+                    <img src="images/logo-naranjo-verde.png" alt="">
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 d-flex justify-content-center align-items-center">
+                    <div class="d-flex">
+                        <img src="images/icon-phone.png" alt="" class="mx-1">
+                        <a href="tel:3416186221" class="mx-1 telefono">3416 186 221</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 d-flex justify-content-end align-items-center">
+                    <div class="d-flex">
+                        <a href="https://www.facebook.com/ElNaranjoBarrioProductor/" target="_blank" class="mx-2">
+                            <img src="images/icon-facebook.png" alt="">
+                        </a>
+                        <a href="https://www.instagram.com/tubarrioproductor/" target="_blank" class="mx-2">
+                            <img src="images/icon-instagram.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal fade" id="formulario" tabindex="-1" aria-labelledby="formularioLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="" class="d-flex flex-column justify-content-center form-banner-principal" id="form-modal">
+                <h3>Dejanos tu consulta</h3>
+                <div class="form-group d-flex flex-column">
+                    <label for="nombre">nombre</label>
+                    <input type="text" name="nombre">
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="email">email</label>
+                    <input type="email" name="email">
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="celular">celular</label>
+                    <input type="tel" name="celular">
+                </div>
+                <div class="form-group d-flex flex-column">
+                    <label for="mensaje">mensaje</label>
+                    <textarea name="mensaje" id="mensaje"></textarea>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <p id="resp2"></p>
+                    <button type="submit" class="boton-form" id="enviar2">Enviar</button>
+                    <button class="boton-form" id="enviando2" style="display: none;">Enviando</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div>
+    
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script src="js/menu-desplegable.js"></script>
+    <script src="js/ancla.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/mail.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        AOS.refreshHard();
+    </script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function(){
+
+        
+            $(".owl-carousel").owlCarousel({
+
+                items: 1,
+                loop:true,
+                margin:20,
+                autoplay:true,
+                dots:true,
+                autoplayTimeout:4000,
+                touchDrag: true,
+                mouseDrag:true, 
+                    
+
+            });
+        
+        
+        });
+
+    </script>
+</body>
+</html>
